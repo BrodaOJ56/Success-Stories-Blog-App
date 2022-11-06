@@ -3,12 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import current_user, login_user, logout_user, login_required, LoginManager, UserMixin
 from datetime import datetime
-# import json
-#import math
 import os
 
-# with open('info.json', 'r') as info:
-#     params = json.load(info)['params']
 
 base_dir = os.path.dirname(os.path.realpath(__file__))
 
