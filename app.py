@@ -218,7 +218,7 @@ def delete(id):
     if current_user.username == post_to_delete.author:
         db.session.delete(post_to_delete)
         db.session.commit()
-        flash("That post is gone!")
+        flash("Story deleted!")
         return redirect(url_for('index'))
     
     context = {
