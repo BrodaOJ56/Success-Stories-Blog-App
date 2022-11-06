@@ -1,0 +1,23 @@
+{% extends 'layout.html' %} {% block content %}
+{% if current_user.is_authenticated %}
+<h2>Welcome to Success Stories's Blog, {{current_user.username}}!</h2>
+<p><a href="{{url_for('contribute')}}" class="button">Contribute</a></p>
+{% else %}
+<h2>Welcome  to Success Stories's Blog! </h2>
+<p>Hello, adventurer, why wander alone? <a href="{{url_for('login')}}">Join us</a> and tell your Success stories here...</p>
+{% endif %}
+
+{% for post in posts%}
+<div class="post-preview">
+  <a href="/post/{{post.id}}/">
+    <h2 class="post-tilte">
+      {{post.title}}
+    </h2>
+  </a>
+  <p class="post-meta"> posted by
+    <a href="#">{{post.author}}</a> on {{post.created_on.strftime('%d/%b/%Y')}}</p>
+    {{ post.content[0:300] }} ...
+</div>
+{% endfor %}
+
+{% endblock content %}

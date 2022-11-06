@@ -1,0 +1,20 @@
+{% extends 'layout.html' %} {% block content %}
+
+<h1>About Me</h1>
+
+<p>
+  Helping young people grow into their potential by reading
+  success and sharing stories.
+  
+  Many young persons feel lost and anxious about study, career, thoughts and their future.
+  
+  We wanted to help change that by creating this micro blog, 
+  a place where one go to read and share their success profiles with others.
+</p>
+
+<p>
+  Authentication is not required to contribute on this blog <a href="{{url_for('login')}}">log in</a> to share, edit or delete your
+  stories.
+  
+</p>
+{% endblock content %}
