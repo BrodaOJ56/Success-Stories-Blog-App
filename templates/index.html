@@ -16,8 +16,7 @@
   </a>
   <p class="post-meta"> posted by
     <a href="#">{{post.author}}</a> on {{post.created_on.strftime('%d/%b/%Y')}}</p>
-    {{ post.content[0:300] }} ...
-</div>
+    {{ post.content[0:300] }} <a href="/post/{{ post.id }}/">Read More</a></p>
 {% endfor %}
 
 {% endblock content %}
