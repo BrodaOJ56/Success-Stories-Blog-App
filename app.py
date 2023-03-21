@@ -10,7 +10,7 @@ base_dir = os.path.dirname(os.path.realpath(__file__))
 
 app = Flask(__name__)
 
-app.config["SQLALCHEMY_DATABASE_URI"] = 'postgres://magxfphlbqewdv:6851850b6f7bbf4de96687983d65d9a7b9f552f127040d83ab65d477eef07939@ec2-3-92-151-217.compute-1.amazonaws.com:5432/dbab2951fj5qd2' + os.path.join(base_dir, 'fun_db.db')
+app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(base_dir, 'fun_db.db')
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SECRET_KEY"] = 'dcabc46275bceb98bf55e21c'
 
